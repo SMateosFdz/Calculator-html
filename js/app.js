@@ -20,6 +20,9 @@ function calcular(valor){
 		case 4:
 		resultado = parseInt(operandoA.value) / parseInt(operandoB.value);
 		break;
+
+		case 5:
+		resultado = parseInt(operandoA.value) ** parseInt(operandoB.value);
 		
 	}	
 
