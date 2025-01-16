@@ -8,20 +8,36 @@
     <title>Aplicación Calculadora</title>
   </head>
   <body>
+	
+
     <div class="container">
         <h1>Aplicación Calculadora</h1>
+
+		<div style="text-align: center;">
+			<button id="infoButton" class="btn btn-primary mb-3">Información</button>
+		</div>
+		
+		<div id="infoModal" class="modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				<h2>Sobre esta calculadora</h2>
+				<p>Todas las operaciones que requieren dos operandos, utilizarán los operandos 1 y 2</p>
+				<p>Aquellas operaciones que solo requieran de un operando, utilizarán por defecto el operando 1, ignorando el operando 2</p>
+			</div>
+		</div>
+
         <div id="form">
 			<form id="forma">
 				<div class="mb-3">
 				<label for="operandoA">Operando 1:</label>
 				<br>
-				<input type="number" class="form-control" placeholder="Escribe operando A" id="operandoA">
+				<input type="number" class="form-control" id="operandoA">
 				</div>
 
 				<div class="mb-3">
 				<label for="operandoB">Operando 2:</label>
 				<br>
-				<input type="number" class="form-control" placeholder="Escribe operando B" id="operandoB">
+				<input type="number" class="form-control" id="operandoB">
 				</div>
 			</form>
 		</div>
@@ -31,7 +47,9 @@
 			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(2)">Restar</button>
 			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(3)">Multiplicar</button>
 			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(4)">Dividir</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(5)">Exponente</button>
+			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(5)">Resto</button>
+			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(6)">Exponente</button>
+			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(7)">Raíz cuadrada</button>
 		</div>
         <div id="resultado"></div>
 
