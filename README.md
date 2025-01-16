@@ -8,6 +8,7 @@ Simple calculator html, with addition, subtraction, division and product
 
 ## Update new features
 Remainder and square root
+
 Info popup in spanish
 
 ## Code
