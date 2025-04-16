@@ -5,55 +5,103 @@
 
 	<link href="css/styles.css" rel="stylesheet">
 
-    <title>Aplicación Calculadora</title>
+    <title>Web Calculator</title>
   </head>
   <body>
+
+    <div id="es-language">
+		<div class="container">
+			<h1>Calculadora web</h1>
 	
-
-    <div class="container">
-        <h1>Aplicación Calculadora</h1>
-
-		<div style="text-align: center;">
-			<button id="infoButton" class="btn btn-primary mb-3">Información</button>
-		</div>
-		
-		<div id="infoModal" class="modal">
-			<div class="modal-content">
-				<span class="close-button">&times;</span>
-				<h2>Sobre esta calculadora</h2>
-				<p>Todas las operaciones que requieren dos operandos, utilizarán los operandos 1 y 2</p>
-				<p>Aquellas operaciones que solo requieran de un operando, utilizarán por defecto el operando 1, ignorando el operando 2</p>
+			<div style="text-align: center;">
+				<button id="infoButtonEs">Información</button>
+				<button type="submit" id="changeLanguage" onclick="changeLanguage()">EN</button>
 			</div>
-		</div>
-
-        <div id="form">
-			<form id="forma">
-				<div class="mb-3">
-				<label for="operandoA">Operando 1:</label>
-				<br>
-				<input type="number" class="form-control" id="operandoA">
+			
+			<div id="infoModalEs" class="modalEs">
+				<div class="modal-content">
+					<span class="close-buttonEs">&times;</span>
+					<h2>Sobre esta calculadora</h2>
+					<p>Las operaciones que requieran 2 operandos, usarán primero el operando 1 y luego el operando 2</p>
+					<p>Las operaciones que solo requiran de un operando, tomarán el primero por defecto, ignorando el segundo</p>
 				</div>
+			</div>
+	
+			<div id="form">
+				<form id="formEs">
+					<div class="mb-3">
+					<label for="operandoA">Operando 1:</label>
+					<br>
+					<input type="number" class="form-control" id="operandoA">
+					</div>
+	
+					<div class="mb-3">
+					<label for="operandoB">Operando 2:</label>
+					<br>
+					<input type="number" class="form-control" id="operandoB">
+					</div>
+				</form>
+			</div>
+	
+			<div id="buttons">
+				<button type="submit" id="op1" onclick="calcular(1)">Sumar</button>
+				<button type="submit" id="op2" onclick="calcular(2)">Restar</button>
+				<button type="submit" id="op3" onclick="calcular(3)">Multiplicar</button>
+				<button type="submit" id="op4" onclick="calcular(4)">Dividir</button>
+				<button type="submit" id="op5" onclick="calcular(5)">Resto</button>
+				<button type="submit" id="op6" onclick="calcular(6)">Exponente</button>
+				<button type="submit" id="op7" onclick="calcular(7)">Raíz cuadrada</button>
+			</div>
+			<div id="resultEs"></div>
+		</div>
+	</div>
 
-				<div class="mb-3">
-				<label for="operandoB">Operando 2:</label>
-				<br>
-				<input type="number" class="form-control" id="operandoB">
+	<div id="en-language">
+		<div class="container">
+			<h1>Web Calculator</h1>
+	
+			<div style="text-align: center;">
+				<button id="infoButtonEn">Information</button>
+				<button type="submit" id="changeLanguage" onclick="changeLanguage()">ES</button>
+			</div>
+			
+			<div id="infoModalEn" class="modalEn">
+				<div class="modal-content">
+					<span class="close-buttonEn">&times;</span>
+					<h2>About this calculator</h2>
+					<p>Operations requiring 2 operands, will use operands 1 and 2</p>
+					<p>Operations which require only 1 operand, will use operand 1 by default, ignoring operand 2</p>
 				</div>
-			</form>
+			</div>
+	
+			<div id="form">
+				<form id="formEn">
+					<div class="mb-3">
+					<label for="operandoA">Operand 1:</label>
+					<br>
+					<input type="number" class="form-control" id="operandoA">
+					</div>
+	
+					<div class="mb-3">
+					<label for="operandoB">Operand 2:</label>
+					<br>
+					<input type="number" class="form-control" id="operandoB">
+					</div>
+				</form>
+			</div>
+	
+			<div id="buttons">
+				<button type="submit" id="op1" onclick="calcular(1)">Add</button>
+				<button type="submit" id="op2" onclick="calcular(2)">Substract</button>
+				<button type="submit" id="op3" onclick="calcular(3)">Multiply</button>
+				<button type="submit" id="op4" onclick="calcular(4)">Division</button>
+				<button type="submit" id="op5" onclick="calcular(5)">Rest</button>
+				<button type="submit" id="op6" onclick="calcular(6)">Exponent</button>
+				<button type="submit" id="op7" onclick="calcular(7)">Square root</button>
+			</div>
+			<div id="resultEn"></div>
 		</div>
-
-        <div id="buttons">
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(1)">Sumar</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(2)">Restar</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(3)">Multiplicar</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(4)">Dividir</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(5)">Resto</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(6)">Exponente</button>
-			<button type="submit" class="btn btn-primary mb-3" onclick="calcular(7)">Raíz cuadrada</button>
-		</div>
-        <div id="resultado"></div>
-
-    </div>
+	</div>
 
     <script src="js/app.js"></script>
   </body>
