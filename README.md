@@ -11,6 +11,8 @@ Remainder and square root
 
 Info popup in spanish
 
+Now in 2 languages! Both English and Spanish
+
 ## Code
 Currently in spanish
 
