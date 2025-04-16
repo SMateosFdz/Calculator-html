@@ -1,6 +1,10 @@
-// Function to do the operations
-// It takes the values from the html and parses to Float
-// It also covers errors like the lack of an operand
+/**
+ * Function to do the operations
+ * 
+ * It takes the values from the html and parses to Float
+ * 
+ * It also covers errors like the lack of an operand
+ */
 function calcular(valor){
 	const changeButton = document.getElementById("changeLanguage");
     let operandoA = changeButton.innerHTML == "EN" ? formEs["operandoA"] : formEn["operandoA"];
@@ -105,6 +109,13 @@ closeButtonEn.onclick = function() {
     }
 }*/
 
+
+
+/**
+ * Functionn to change the language of the web
+ * 
+ * Currently EN and ES
+ */
 function changeLanguage(){
 	const changeButton = document.getElementById("changeLanguage");
 	changeButton.innerHTML == "ES" ? changeButton.innerHTML = "EN" : changeButton.innerHTML = "ES";
