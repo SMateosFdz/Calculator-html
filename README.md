@@ -1,16 +1,12 @@
 # Calculator-html
-Simple calculator html, with addition, subtraction, division and product
+Simple calculator html, with addition, subtraction, division, product, rest and square root
 
 ## Table of contents
 * [Last update](##update-new-features)
 * [Code](##code)
 * [Comments](##comments-in-code)
 
-## Update new features
-Remainder and square root
-
-Info popup in spanish
-
+## Last update new features
 Now in 2 languages! Both English and Spanish
 
 ## Code
