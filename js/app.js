@@ -103,16 +103,18 @@ closeButtonEn.onclick = function() {
 }
 
 // If the user clicks out of the message, it hides it
-/*window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}*/
+window.onclick = function(event) {
+    if (event.target == modalEs) {
+        modalEs.style.display = "none";
+    }else if(event.target == modalEn){
+		modalEn.style.display = "none";
+	}
+}
 
 
 
 /**
- * Functionn to change the language of the web
+ * Function to change the language of the web
  * 
  * Currently EN and ES
  */
@@ -121,6 +123,7 @@ function changeLanguage(){
 	changeButton.innerHTML == "ES" ? changeButton.innerHTML = "EN" : changeButton.innerHTML = "ES";
 	
 	if(changeButton.innerHTML == "EN"){
+		document.title = "Calculadora Web";
 		document.getElementById("es-language").style.display = "inline";
 		document.getElementById("en-language").style.display = "none";
 		document.getElementById("resultEs").innerHTML = "";
@@ -128,6 +131,7 @@ function changeLanguage(){
 		formEs["operandoA"].value = "";
 		formEs["operandoB"].value = "";
 	}else{
+		document.title = "Web Calculator";
 		document.getElementById("en-language").style.display = "inline";
 		document.getElementById("es-language").style.display = "none";
 		document.getElementById("resultEs").innerHTML = "";
